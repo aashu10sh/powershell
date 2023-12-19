@@ -1,8 +1,8 @@
-Set-Location -Path C:\Temp\ -PassThru
+Set-Location -Path $ENV:Temp -PassThru
 
 
 $url = "https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe"
-$temp_location = "C:\Temp\";
+$temp_location = $ENV:Temp;
 
 $WebClient = New-Object System.Net.WebClient
 $WebClient.DownloadFile($url,$temp_location)
